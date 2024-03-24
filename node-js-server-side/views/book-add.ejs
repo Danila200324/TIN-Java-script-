@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="/static/js/index.js"></script>
+    <title>ByPol</title>
+</head>
+<body>
+<nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a href="/books/">
+            <span class="navbar-brand mb-0 h1">ByPol</span>
+        </a>
+    </div>
+</nav>
+<div class="container mt-4">
+    <h1 style="text-align: center">Add Book</h1>
+    <div class="collapse mb-3 show" id="collapseExample">
+        <div id="messages" class="text-center">
+            <% if (successMessage) { %>
+                <div class="alert alert-success" role="alert">
+                    <%= successMessage %>
+                </div>
+            <% } %>
+            <% if (errorMessage) { %>
+                <div class="alert alert-danger" role="alert">
+                    <%= errorMessage %>
+                </div>
+            <% } %>
+        </div>
+        <form action="/book/create" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="title">Title *</label>
+                <input type="text" required class="form-control" id="title" name="title">
+                <div class="error-message" id="titleError"></div>
+            </div>
+            <div class="form-group">
+                <label for="price">Book Price *</label>
+                <div class="input-group">
+                    <input type="number" required class="form-control" id="price" name="price">
+                    <div class="input-group-append">
+                        <span class="input-group-text">USD</span>
+                    </div>
+                </div>
+                <div class="error-message" id="priceError"></div>
+            </div>
+            <div class="form-group">
+                <label for="description">Book Description *</label>
+                <textarea required class="form-control" id="description" name="description"></textarea>
+                <div class="error-message" id="descriptionError"></div>
+            </div>
+            <div class="form-group">
+                <label for="contactPhone">Contact Number *</label>
+                <input type="text" required class="form-control" id="contact_phone" name="contact_phone">
+                <div class="error-message" id="contactPhoneError"></div>
+            </div>
+            <div class="form-group">
+                <label for="contactEmail">Contact email * </label>
+                <input type="email" required class="form-control" id="contact_email" name="contact_email">
+                <div class="error-message" id="emailError"></div>
+            </div>
+            <div class="form-group">
+                <label for="category">Category *</label>
+                <input type="text" required class="form-control" id="category" name="category">
+                <div class="error-message" id="categoryError"></div>
+            </div>
+            <div class="form-group">
+                <label for="image">Choose an Image *</label>
+                <input required type="file" class="form-control-file" id="image" name="image">
+                <div class="error-message" id="imageError"></div>
+            </div>
+            <button type="submit" class="btn btn-dark btn-block">Enter</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,141 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #495057;
+    line-height: 1.6;
+}
+
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    padding: 0.375rem 0.75rem;
+    border-radius: 0.25rem;
+    background-color: #343a40;
+    border-color: #343a40;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #777777;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.5;
+    color: #343a40;
+    background-color: #f5f5f5;
+    border: 1px solid #343a40;
+    border-radius: 0.25rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+.product {
+    width: 250px;
+    padding: 10px;
+    margin: 10px;
+    background-color: #343a40;
+    border: 1px solid #495057;
+    border-radius: 5px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.product .card-img-top {
+    max-width: 100%;
+    max-height: 70%;
+}
+
+.product .card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 10px 0;
+}
+
+.product .card-text {
+    font-size: 1rem;
+    color: #ffc107;
+    margin: 5px 0;
+}
+
+.product .btn-primary {
+    background-color: #007bff;
+    border: none;
+}
+
+.product .btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.product .btn-primary:focus {
+    background-color: #0056b3;
+    box-shadow: none;
+}
+
+.navbar {
+    background-color: #343a40;
+    text-align: center;
+    padding: 20px;
+}
+
+.navbar-brand {
+    font-family: 'Italian-font', cursive;
+    font-size: 36px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 10px;
+}
+
+
+.product .card-img-top {
+    width: 250px;
+    height: 250px;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    color: #155724;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+}
+
+.correct-input {
+    background-color: #c8f7c5;
+}
+
+.wrong-input {
+    background-color: #f7c5c5;
+}
+
+.error-message {
+    color: red;
+}

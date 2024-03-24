@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="../static/style.css">
+    <title>Book Information</title>
+</head>
+<body>
+<nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a href="/books/">
+            <span class="navbar-brand mb-0 h1">ByPol</span>
+        </a>
+    </div>
+</nav>
+<div class="container mt-4">
+    <div style="text-align: center;">
+        <img src="data:image/jpeg;base64,<%= book.image.toString('base64') %>" class="card-img-top" style="display: block; margin: 0 auto;">
+    </div>
+    <div class="container mt-4">
+        <h1 style="text-align: center"><%= book.title %> | $<%= book.price %></h1>
+        <p style="text-align: center">
+            <%= book.description %><br>
+            Telephone Number: <b><%= book.contact_phone %></b><br>
+            Contact email: <b><%= book.contact_email %></b><br>
+        </p>
+    </div>
+</div>
+</body>
+</html>

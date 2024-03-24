@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="../static/js/books-async.js"></script>
+    <title>Book Store</title>
+</head>
+<body>
+<nav class="navbar navbar-dark bg-black">
+    <div class="container-fluid">
+        <a href="/books" class="navbar-brand">
+            <span class="h1">ByPol</span>
+        </a>
+        <div class="btn-group ml-auto">
+            <button class="btn btn-light my-2 my-sm-0" type="button" onclick="window.location.href = '/book/add'">
+                Add Book
+            </button>
+        </div>
+        <div class="btn-group ml-auto">
+            <button class="btn btn-light my-2 my-sm-0" type="button" onclick="window.location.href = '/logout'">
+                Logout
+            </button>
+        </div>
+    </div>
+</nav>
+<div class="container mt-4">
+    <h1 style="text-align: center">Books</h1>
+    <hr>
+    <div class="card-grid" id="book-list">
+        <% for (let i = 0; i < books.length; i++) { %>
+            <div class="card text-white bg-dark my-3 product">
+                <img src="data:image/jpeg;base64,<%= books[i].image.toString('base64') %>" class="card-img-top">
+                <div class="card-body book-info-container">
+                    <h5 class="card-title text-white"><%= books[i].title %></h5>
+                    <p class="card-text text-white"><%= books[i].price %></p>
+                    <a href="/books/<%= books[i].id %>" class="btn btn-primary">View Details</a>
+                </div>
+            </div>
+        <% } %>
+    </div>
+</div>
+</body>
+</html>
